@@ -116,12 +116,11 @@
 				<configuration>
 					<useSystemClassLoader>false</useSystemClassLoader>
 					<testFailureIgnore>true</testFailureIgnore>
-					<shutdown>kill</shutdown>
-					<forkCount>3</forkCount>
-					<reuseForks>true</reuseForks>
+					<skipTests>false</skipTests>
+					<forkMode>once</forkMode>
 					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<suiteXmlFiles>
-						<suiteXmlFile>E:\Java demo\selenium_Task\src\test\resources\testrunners\testng_regression.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
 					</suiteXmlFiles>
 
 					<argLine>
