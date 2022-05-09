@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Expedia project]">
+  <listeners>
+    <listener class-name="com.ba.Task.listeners.TestAllureListener"/>
+  </listeners>
   <test thread-count="2" verbose="4" name="ExpediaTravelPage(failed)">
     <classes>
       <class name="com.ba.Task.tests.TravelPageTest">
@@ -8,7 +11,9 @@
           <include name="searchClick"/>
           <include name="selectTraveller"/>
           <include name="searchbtn"/>
+          <include name="TravelpageTitleTests"/>
           <include name="setup"/>
+          <include name="TravlePageTest"/>
           <include name="SelectFirstDate"/>
         </methods>
       </class> <!-- com.ba.Task.tests.TravelPageTest -->
