@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import com.ba.Task.utils.Constants;
 import com.ba.Task.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 
 
 public class ResultPage {
@@ -25,6 +27,7 @@ public class ResultPage {
 			elementUtil=new ElementUtil(driver);
 		}
 
+		@Step("getting Result page Reserveroom")
 		public void Reserveroom() throws Exception {
 			
 			Boolean doDisplay=elementUtil.doDisplayed(Reserveroom);
@@ -36,6 +39,7 @@ public class ResultPage {
 			Thread.sleep(2000);	
 		}
 		
+		@Step("getting Result page ReserveBtn")
 		public void Reserve() throws Exception{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,1350)", "");
@@ -46,6 +50,7 @@ public class ResultPage {
 			Thread.sleep(3000);	
 		}
 		
+		@Step("getting Result page Pay Button")
 		public void Pay() throws Exception{
 			Boolean doDisplay = elementUtil.doDisplayed(payment);
 			if(doDisplay == true) {
@@ -59,6 +64,7 @@ public class ResultPage {
 			
 		}
 		
+		@Step("getting Result page PaymentPageCurrentTitle")
 		public String getPaymentPageTitle() {
 			return elementUtil.waitForTitleIs(Constants.Payment_page_Title, 5);
 		}

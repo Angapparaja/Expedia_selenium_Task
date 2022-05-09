@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ba.Task.utils.Constants;
 import com.ba.Task.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 
 
 public class BookingPage {
@@ -39,18 +41,22 @@ public class BookingPage {
 		elementUtil=new ElementUtil(driver);
 	}
 	
+	@Step("getting Booking page title")
 	public String getBookingpageTitle() {
 		return elementUtil.waitForTitleContains(Constants.Booking_Page_Title, 5);
 	}
 	
+	@Step("getting Booking page url")
 	public String getBookingpageUrl() {
 		return elementUtil.waitForUrlContains(Constants.Booking_Page_Url_Fraction, 5); 
 	}
 	
+	@Step("getting Booking page ischeckamount")
 	public Boolean ischeckAmount(){
 		return elementUtil.doDisplayed(isCheckAmount);
 	}
 	
+	@Step("getting Booking page select checkamount")
 	public void checkAmount() throws Exception {
 		Boolean doDisplay=elementUtil.isSelected(Checkamount);
 		if(doDisplay == false) {
@@ -60,9 +66,12 @@ public class BookingPage {
 		Thread.sleep(5000);	
 	}
 	
+	@Step("getting Booking page ischeckRating")
 	public Boolean ischeckRating(){
 		return elementUtil.doDisplayed(isCheckRating);
 	}
+	
+	@Step("getting Booking page rating review")
 	public void Ratingreview() throws Exception {
 		Boolean doDisplay=elementUtil.isSelected(GuestRating);
 		if(doDisplay == false) {
@@ -70,9 +79,13 @@ public class BookingPage {
 		}
 		Thread.sleep(5000);	
 	}
+	
+	@Step("getting Booking page ischeckLunch")
 	public Boolean isCheckLunchincluded(){
 		return elementUtil.doDisplayed(isCheckLunchincluded);
 	}
+	
+	@Step("getting Booking page selectLunch")
 	public void selectLunch() throws Exception {
 		Boolean doDisplay=elementUtil.isSelected(Lunchincluded);
 		if(doDisplay == false) {
@@ -80,6 +93,8 @@ public class BookingPage {
 		}
 	Thread.sleep(5000);
 	}
+	
+	@Step("getting Booking page ischeckDinnerincluded")
 	public Boolean isCheckDinnerincluded(){
 		return elementUtil.doDisplayed(isCheckDinnerincluded);
 	}
@@ -92,6 +107,7 @@ public class BookingPage {
 		Thread.sleep(5000);
 	}
 	
+	@Step("getting Booking page selectdropdownList")
 	public void selectdropdownList() throws Exception {	
 	Select dropdown = new Select(elementUtil.getElement(dropdowndetails));
 	Boolean doDisplay=elementUtil.doDisplayed(dropdowndetails);
@@ -101,6 +117,7 @@ public class BookingPage {
 	Thread.sleep(5000);
 	}
 	
+	@Step("getting Booking page selectCheapestHotelList")
 	public void selectCheapestHotelList() throws Exception{
 		List<WebElement> listofhotels =elementUtil.getElements(ListofHotels);
 		 for(WebElement lists:listofhotels) {
@@ -114,7 +131,7 @@ public class BookingPage {
 		
 	}
 	
-	
+	@Step("getting Booking page cheapestHotel")
 	public String CheapestHotel() {
 		
 	 WebElement l =elementUtil.getElement(cheapestHotels);
@@ -123,6 +140,7 @@ public class BookingPage {
 	return value1;
 	}
 	
+	@Step("getting Booking page clickCheapestHotel")
 	public ResultPage clickCheaphotel() {
 		try {
 			elementUtil.doClick(clickCheapestHotel);

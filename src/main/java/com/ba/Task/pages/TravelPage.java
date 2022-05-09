@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ba.Task.utils.Constants;
 import com.ba.Task.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 
 
 public class TravelPage {
@@ -36,15 +38,17 @@ public class TravelPage {
 	
 	
 	//constructor
+	
 	public TravelPage(WebDriver driver) {
 		this.driver=driver;
 		elementUtil=new ElementUtil(driver);//same driver will be pass
 	}
 	
+	@Step("getting Travel page title")
 	public String getTravelpageTitle() {
 		return elementUtil.waitForTitleIs(Constants.Travel_Page_Title, 5);
 	}
-	
+	@Step("getting DoTravel page location")
 	public BookingPage doTravel(String place)  {
 		elementUtil.doClick(enterlocation);
 		elementUtil.doSendkeys(enterPlace, place);
@@ -52,6 +56,7 @@ public class TravelPage {
 		return new BookingPage(driver); 
 		
 	}
+	@Step("getting Travel page travelling date")
 	public BookingPage doTravelDate() throws InterruptedException  {
 		elementUtil.doClick(selectDate);
 		Thread.sleep(1000);
@@ -65,6 +70,8 @@ public class TravelPage {
 		return new BookingPage(driver);
 		
 	}
+	
+	@Step("getting Travel page travellers List")
 	public BookingPage Travellers() {
 		elementUtil.doClick(selectTraveller);
 		elementUtil.doClick(incrementperson);
@@ -74,11 +81,15 @@ public class TravelPage {
 		elementUtil.doClick(doneBtn);
 		return new BookingPage(driver);
 	}
+	
+	@Step("getting Travel page searchbtn")
 	public String Searchhotel() {
 		WebElement l=elementUtil.getElement(searchBtn);
 		String value1=l.getText();
 		return value1;
 	}
+	
+	@Step("getting Travel page click search btn")
 public BookingPage SearchBtn()   { 
 			elementUtil.doClick(searchBtn);
 			try {
