@@ -32,7 +32,7 @@ public class DriverFactory {
 		 * @param browserName
 		 * @return
 		 */
-	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
+	//public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 		public WebDriver initDriver(Properties prop) {
 		this.prop =prop;
 			String browserName = prop.getProperty("browser"); 
@@ -44,15 +44,15 @@ public class DriverFactory {
 			
 			
 			if(browserName.equalsIgnoreCase("chrome")) {
-				WebDriverManager.chromedriver().setup();
-				//System.setProperty("webdriver.chrome.driver", "./src/test/resources/ChromeDriver/chromedriver.exe");
+				//WebDriverManager.chromedriver().setup();
+				System.setProperty("webdriver.chrome.driver", "./src/test/resources/ChromeDriver/chromedriver.exe");
 				  
 				if(Boolean.parseBoolean(prop.getProperty("remote"))){
 					init_remoteDriver("chrome");
 				}
 				else {
-				//driver =new ChromeDriver(optionsManager.getChromeOptions());
-				tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+				driver =new ChromeDriver(optionsManager.getChromeOptions());
+			//	tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
 				}
 			}
 			else if(browserName.equalsIgnoreCase("firefox")) {
@@ -63,55 +63,55 @@ public class DriverFactory {
 				}
 				else {
 					//driver =new FirefoxDriver();
-					tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+				//	tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
 				}
 				
 			}
 			else {
 				System.out.println("please pass the right browser name"+browserName);
 			}
-//			driver.manage().deleteAllCookies();
-	//		driver.manage().window().maximize();
-//			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	//		driver.get(prop.getProperty("url")); 
+			driver.manage().deleteAllCookies();
+	    	driver.manage().window().maximize();
+		//	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.get(prop.getProperty("url")); 
 	//
 //			
-//			return driver;
+			return driver;
 			
 			
-			getDriver().manage().deleteAllCookies();
-			getDriver().manage().window().maximize();
+		//	getDriver().manage().deleteAllCookies();
+		//	getDriver().manage().window().maximize();
 		//	getDriver().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS)
-			getDriver().get(prop.getProperty("url"));
+		//	getDriver().get(prop.getProperty("url"));
 			
-			return getDriver();
+		//	return getDriver();
 		}
 		private void init_remoteDriver(String browserName) {
 		System.out.println("running test on remote with browser"+ browserName);
 		if(browserName.equals("chrome")) {
 		DesiredCapabilities caps =DesiredCapabilities.chrome();	
 		caps.setCapability(ChromeOptions.CAPABILITY, optionsManager.getChromeOptions());
-		try {
-			tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")),caps));
-		} catch (MalformedURLException e) {
-		
-			e.printStackTrace();
-		}
+//		try {
+//			//tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")),caps));
+//		} catch (MalformedURLException e) {
+//		
+//			e.printStackTrace();
+//		}
 		}
 		else if(browserName.equals("firefox")) {
 			DesiredCapabilities caps =DesiredCapabilities.firefox();	
 			caps.setCapability(FirefoxOptions.FIREFOX_OPTIONS, optionsManager.getFirefoxOptions());
-			try {
-				tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")),caps));
-			} catch (MalformedURLException e) {
-			
-				e.printStackTrace();
-			}
+//			try {
+//			//	tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")),caps));
+//			} catch (MalformedURLException e) {
+//			
+//				e.printStackTrace();
+//			}
 			}
 		}
-		public WebDriver getDriver() {
-			return tlDriver.get();
-		}
+//		public WebDriver getDriver() {
+//			return tlDriver.get();
+//		}
 		
 		public Properties intiProperties() {  
 			Properties prop =null; 
@@ -137,19 +137,19 @@ public class DriverFactory {
 		/**
 		 * TAKE A SCREENSHOT
 		 */
-		public String getScreenshot() {
-			File srcFile =((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
-			String path= System.getProperty("user.dir")+"/screenshot/"+ System.currentTimeMillis()+".png";
-			
-			File destination =new File(path);
-			
-			try {
-				FileUtils.copyFile(srcFile, destination);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			return path;
-			
-		}
+//		public String getScreenshot() {
+//			File srcFile =((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
+//			String path= System.getProperty("user.dir")+"/screenshot/"+ System.currentTimeMillis()+".png";
+//			
+//			File destination =new File(path);
+//			
+//			try {
+//				FileUtils.copyFile(srcFile, destination);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//			return path;
+//			
+//		}
 	
 }
