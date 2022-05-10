@@ -115,8 +115,8 @@
 
 				<configuration>
 					<useSystemClassLoader>false</useSystemClassLoader>
-					<testFailureIgnore>true</testFailureIgnore>
-					<skipTests>true</skipTests>
+					<testFailureIgnore>false</testFailureIgnore>
+					<skipTests>false</skipTests>
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<forkMode>once</forkMode>
