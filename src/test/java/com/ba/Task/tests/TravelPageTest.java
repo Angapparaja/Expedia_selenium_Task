@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-//import com.ba.Task.listeners.TestAllureListener;
+import com.ba.Task.listeners.TestAllureListener;
 import com.ba.Task.pages.BookingPage;
 import com.ba.Task.utils.Constants;
 import com.ba.Task.utils.Errors;
@@ -16,9 +16,9 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 
-//@Epic("EPIC 100:Design Login page for Expedia application....")
-//@Story("US 101: Login page with different features...")
-//@Listeners(TestAllureListener.class)
+@Epic("EPIC 100:Design Login page for Expedia application....")
+@Story("US 101: Login page with different features...")
+@Listeners(TestAllureListener.class)
 public class TravelPageTest extends BaseTest{
 	
 	@Description("TravelPage title test...")

@@ -5,7 +5,9 @@
 	parallel="none" verbose="4">
 
 	<listeners>
-
+	
+<listener
+			class-name="com.ba.Task.listeners.TestAllureListener" />
 		
 	</listeners>
 
