@@ -116,7 +116,7 @@ public class DriverFactory {
 			Properties prop =null; 
 			
 			try {
-				FileInputStream ip =new FileInputStream("/src/test/resources/config/config.properties");
+				FileInputStream ip =new FileInputStream(".//src//test//resources//config//config.properties");
 				prop =new Properties();
 				prop.load(ip); 
 			} 
