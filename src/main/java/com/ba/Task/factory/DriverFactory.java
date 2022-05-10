@@ -45,14 +45,14 @@ public class DriverFactory {
 			
 			if(browserName.equalsIgnoreCase("chrome")) {
 				//WebDriverManager.chromedriver().setup();
-				System.setProperty("webdriver.chrome.driver", "./src/test/resources/ChromeDriver/chromedriver");
+				System.setProperty("webdriver.chrome.driver", "./src/test/resources/ChromeDriver/chromedriver.exe");
 				  
 				if(Boolean.parseBoolean(prop.getProperty("remote"))){
 					init_remoteDriver("chrome");
 				}
 				else {
-				//driver =new ChromeDriver();
-				tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+				driver =new ChromeDriver(optionsManager.getChromeOptions());
+				//tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
 				}
 			}
 			else if(browserName.equalsIgnoreCase("firefox")) {
@@ -71,9 +71,9 @@ public class DriverFactory {
 				System.out.println("please pass the right browser name"+browserName);
 			}
 //			driver.manage().deleteAllCookies();
-//			driver.manage().window().maximize();
+			driver.manage().window().maximize();
 //			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//			driver.get(prop.getProperty("url")); 
+			driver.get(prop.getProperty("url")); 
 	//
 //			
 //			return driver;

@@ -2,27 +2,16 @@
 <testng-results skipped="18" failed="0" ignored="0" total="18" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Expedia project" duration-ms="819" started-at="2022-05-10T13:24:34 IST" finished-at="2022-05-10T13:24:35 IST">
+  <suite name="Expedia project" duration-ms="16715" started-at="2022-05-10T13:29:43 IST" finished-at="2022-05-10T13:29:59 IST">
     <groups>
     </groups>
-    <test name="ExpediaTravelPage" duration-ms="553" started-at="2022-05-10T13:24:34 IST" finished-at="2022-05-10T13:24:35 IST">
+    <test name="ExpediaTravelPage" duration-ms="9293" started-at="2022-05-10T13:29:43 IST" finished-at="2022-05-10T13:29:52 IST">
       <class name="com.ba.Task.tests.TravelPageTest">
-        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.TravelPageTest@6826c41e]" name="setup" is-config="true" duration-ms="143" started-at="2022-05-10T13:24:34 IST" finished-at="2022-05-10T13:24:34 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.TravelPageTest@5aa6202e]" name="setup" is-config="true" duration-ms="8092" started-at="2022-05-10T13:29:43 IST" finished-at="2022-05-10T13:29:51 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -50,26 +39,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="TravelpageTitleTests()[pri:1, instance:com.ba.Task.tests.TravelPageTest@6826c41e]" name="TravelpageTitleTests" duration-ms="0" started-at="2022-05-10T13:24:34 IST" finished-at="2022-05-10T13:24:34 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="TravelpageTitleTests()[pri:1, instance:com.ba.Task.tests.TravelPageTest@5aa6202e]" name="TravelpageTitleTests" duration-ms="0" started-at="2022-05-10T13:29:52 IST" finished-at="2022-05-10T13:29:52 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -97,26 +75,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TravelpageTitleTests -->
-        <test-method status="SKIP" signature="TravlePageTest()[pri:1, instance:com.ba.Task.tests.TravelPageTest@6826c41e]" name="TravlePageTest" duration-ms="0" started-at="2022-05-10T13:24:34 IST" finished-at="2022-05-10T13:24:34 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="TravlePageTest()[pri:1, instance:com.ba.Task.tests.TravelPageTest@5aa6202e]" name="TravlePageTest" duration-ms="0" started-at="2022-05-10T13:29:52 IST" finished-at="2022-05-10T13:29:52 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -144,26 +111,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TravlePageTest -->
-        <test-method status="SKIP" signature="SelectFirstDate()[pri:2, instance:com.ba.Task.tests.TravelPageTest@6826c41e]" name="SelectFirstDate" duration-ms="0" started-at="2022-05-10T13:24:34 IST" finished-at="2022-05-10T13:24:34 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="SelectFirstDate()[pri:2, instance:com.ba.Task.tests.TravelPageTest@5aa6202e]" name="SelectFirstDate" duration-ms="0" started-at="2022-05-10T13:29:52 IST" finished-at="2022-05-10T13:29:52 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -191,26 +147,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectFirstDate -->
-        <test-method status="SKIP" signature="selectTraveller()[pri:3, instance:com.ba.Task.tests.TravelPageTest@6826c41e]" name="selectTraveller" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="selectTraveller()[pri:3, instance:com.ba.Task.tests.TravelPageTest@5aa6202e]" name="selectTraveller" duration-ms="0" started-at="2022-05-10T13:29:52 IST" finished-at="2022-05-10T13:29:52 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -238,26 +183,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectTraveller -->
-        <test-method status="SKIP" signature="searchbtn()[pri:4, instance:com.ba.Task.tests.TravelPageTest@6826c41e]" name="searchbtn" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="searchbtn()[pri:4, instance:com.ba.Task.tests.TravelPageTest@5aa6202e]" name="searchbtn" duration-ms="0" started-at="2022-05-10T13:29:52 IST" finished-at="2022-05-10T13:29:52 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -285,26 +219,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchbtn -->
-        <test-method status="SKIP" signature="searchClick()[pri:5, instance:com.ba.Task.tests.TravelPageTest@6826c41e]" name="searchClick" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="searchClick()[pri:5, instance:com.ba.Task.tests.TravelPageTest@5aa6202e]" name="searchClick" duration-ms="0" started-at="2022-05-10T13:29:52 IST" finished-at="2022-05-10T13:29:52 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -332,30 +255,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchClick -->
       </class> <!-- com.ba.Task.tests.TravelPageTest -->
     </test> <!-- ExpediaTravelPage -->
-    <test name="ExpediaBookingPage" duration-ms="205" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
+    <test name="ExpediaBookingPage" duration-ms="7271" started-at="2022-05-10T13:29:52 IST" finished-at="2022-05-10T13:29:59 IST">
       <class name="com.ba.Task.tests.BookingPageTest">
-        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="setup" is-config="true" duration-ms="4" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="setup" is-config="true" duration-ms="6819" started-at="2022-05-10T13:29:52 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -383,30 +295,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="bookingPageSetup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="bookingPageSetup" is-config="true" duration-ms="-1652169275169" started-at="2022-05-10T13:24:35 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="bookingPageSetup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="bookingPageSetup" is-config="true" duration-ms="-1652169599535" started-at="2022-05-10T13:29:59 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookingPageSetup -->
-        <test-method status="SKIP" signature="selectAmount()[pri:1, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="selectAmount" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="selectAmount()[pri:1, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="selectAmount" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -434,26 +335,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectAmount -->
-        <test-method status="SKIP" signature="ischeckaAmountExist()[pri:2, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="ischeckaAmountExist" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="ischeckaAmountExist()[pri:2, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="ischeckaAmountExist" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -481,26 +371,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ischeckaAmountExist -->
-        <test-method status="SKIP" signature="ischeckaRatingExist()[pri:3, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="ischeckaRatingExist" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="ischeckaRatingExist()[pri:3, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="ischeckaRatingExist" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -528,26 +407,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ischeckaRatingExist -->
-        <test-method status="SKIP" signature="selectGuestRating()[pri:4, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="selectGuestRating" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="selectGuestRating()[pri:4, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="selectGuestRating" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -575,26 +443,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectGuestRating -->
-        <test-method status="SKIP" signature="isCheckLunchincluded()[pri:5, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="isCheckLunchincluded" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="isCheckLunchincluded()[pri:5, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="isCheckLunchincluded" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -622,26 +479,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isCheckLunchincluded -->
-        <test-method status="SKIP" signature="selectLunch()[pri:6, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="selectLunch" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="selectLunch()[pri:6, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="selectLunch" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -669,26 +515,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectLunch -->
-        <test-method status="SKIP" signature="isCheckDinnerincluded()[pri:7, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="isCheckDinnerincluded" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="isCheckDinnerincluded()[pri:7, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="isCheckDinnerincluded" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -716,26 +551,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isCheckDinnerincluded -->
-        <test-method status="SKIP" signature="selectDinner()[pri:8, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="selectDinner" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="selectDinner()[pri:8, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="selectDinner" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -763,26 +587,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectDinner -->
-        <test-method status="SKIP" signature="selectDropdown()[pri:9, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="selectDropdown" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="selectDropdown()[pri:9, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="selectDropdown" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -810,26 +623,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectDropdown -->
-        <test-method status="SKIP" signature="selectHotelList()[pri:10, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="selectHotelList" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="selectHotelList()[pri:10, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="selectHotelList" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -857,26 +659,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectHotelList -->
-        <test-method status="SKIP" signature="cheapesthotels()[pri:11, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="cheapesthotels" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="cheapesthotels()[pri:11, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="cheapesthotels" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -904,26 +695,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cheapesthotels -->
-        <test-method status="SKIP" signature="clickCheapestHotel()[pri:12, instance:com.ba.Task.tests.BookingPageTest@34448e6c]" name="clickCheapestHotel" duration-ms="0" started-at="2022-05-10T13:24:35 IST" finished-at="2022-05-10T13:24:35 IST">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver]]>
-            </message>
+        <test-method status="SKIP" signature="clickCheapestHotel()[pri:12, instance:com.ba.Task.tests.BookingPageTest@7de4a01f]" name="clickCheapestHotel" duration-ms="0" started-at="2022-05-10T13:29:59 IST" finished-at="2022-05-10T13:29:59 IST">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\.\src\test\resources\ChromeDriver\chromedriver
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[java.lang.NullPointerException
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:82)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -951,7 +731,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickCheapestHotel -->
