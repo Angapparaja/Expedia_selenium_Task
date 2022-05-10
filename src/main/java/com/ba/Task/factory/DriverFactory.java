@@ -45,7 +45,7 @@ public class DriverFactory {
 			
 			if(browserName.equalsIgnoreCase("chrome")) {
 				//WebDriverManager.chromedriver().setup();
-				System.setProperty("webdriver.chrome.driver", "./src/test/resources/ChromeDriver/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./src/test/resources/Driver/chromedriver.exe");
 				  
 				if(Boolean.parseBoolean(prop.getProperty("remote"))){
 					init_remoteDriver("chrome");
@@ -56,8 +56,8 @@ public class DriverFactory {
 				}
 			}
 			else if(browserName.equalsIgnoreCase("firefox")) {
-				WebDriverManager.firefoxdriver().setup();
-				
+			//	WebDriverManager.firefoxdriver().setup();
+				System.setProperty("webdriver.gecko.driver", "./src/test/resources/Driver/geckodriver.exe");
 				if(Boolean.parseBoolean(prop.getProperty("remote"))){
 					init_remoteDriver("firefox");
 				}
