@@ -2,18 +2,18 @@
 <testng-results skipped="18" failed="0" ignored="0" total="18" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Expedia project" duration-ms="785" started-at="2022-05-10T13:02:17 IST" finished-at="2022-05-10T13:02:18 IST">
+  <suite name="Expedia project" duration-ms="849" started-at="2022-05-10T13:13:11 IST" finished-at="2022-05-10T13:13:12 IST">
     <groups>
     </groups>
-    <test name="ExpediaTravelPage" duration-ms="546" started-at="2022-05-10T13:02:17 IST" finished-at="2022-05-10T13:02:18 IST">
+    <test name="ExpediaTravelPage" duration-ms="592" started-at="2022-05-10T13:13:11 IST" finished-at="2022-05-10T13:13:12 IST">
       <class name="com.ba.Task.tests.TravelPageTest">
-        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.TravelPageTest@771158fb]" name="setup" is-config="true" duration-ms="122" started-at="2022-05-10T13:02:17 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.TravelPageTest@11ce2e22]" name="setup" is-config="true" duration-ms="129" started-at="2022-05-10T13:13:11 IST" finished-at="2022-05-10T13:13:11 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -54,13 +54,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="TravelpageTitleTests()[pri:1, instance:com.ba.Task.tests.TravelPageTest@771158fb]" name="TravelpageTitleTests" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="TravelpageTitleTests()[pri:1, instance:com.ba.Task.tests.TravelPageTest@11ce2e22]" name="TravelpageTitleTests" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -101,13 +101,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TravelpageTitleTests -->
-        <test-method status="SKIP" signature="TravlePageTest()[pri:1, instance:com.ba.Task.tests.TravelPageTest@771158fb]" name="TravlePageTest" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="TravlePageTest()[pri:1, instance:com.ba.Task.tests.TravelPageTest@11ce2e22]" name="TravlePageTest" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -148,13 +148,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TravlePageTest -->
-        <test-method status="SKIP" signature="SelectFirstDate()[pri:2, instance:com.ba.Task.tests.TravelPageTest@771158fb]" name="SelectFirstDate" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="SelectFirstDate()[pri:2, instance:com.ba.Task.tests.TravelPageTest@11ce2e22]" name="SelectFirstDate" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -195,13 +195,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectFirstDate -->
-        <test-method status="SKIP" signature="selectTraveller()[pri:3, instance:com.ba.Task.tests.TravelPageTest@771158fb]" name="selectTraveller" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="selectTraveller()[pri:3, instance:com.ba.Task.tests.TravelPageTest@11ce2e22]" name="selectTraveller" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -242,13 +242,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectTraveller -->
-        <test-method status="SKIP" signature="searchbtn()[pri:4, instance:com.ba.Task.tests.TravelPageTest@771158fb]" name="searchbtn" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="searchbtn()[pri:4, instance:com.ba.Task.tests.TravelPageTest@11ce2e22]" name="searchbtn" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -289,13 +289,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchbtn -->
-        <test-method status="SKIP" signature="searchClick()[pri:5, instance:com.ba.Task.tests.TravelPageTest@771158fb]" name="searchClick" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="searchClick()[pri:5, instance:com.ba.Task.tests.TravelPageTest@11ce2e22]" name="searchClick" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -338,15 +338,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- searchClick -->
       </class> <!-- com.ba.Task.tests.TravelPageTest -->
     </test> <!-- ExpediaTravelPage -->
-    <test name="ExpediaBookingPage" duration-ms="175" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+    <test name="ExpediaBookingPage" duration-ms="184" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
       <class name="com.ba.Task.tests.BookingPageTest">
-        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="setup" is-config="true" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="setup" is-config="true" duration-ms="3" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -387,17 +387,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="bookingPageSetup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="bookingPageSetup" is-config="true" duration-ms="-1652167938536" started-at="2022-05-10T13:02:18 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="bookingPageSetup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="bookingPageSetup" is-config="true" duration-ms="-1652168592468" started-at="2022-05-10T13:13:12 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookingPageSetup -->
-        <test-method status="SKIP" signature="selectAmount()[pri:1, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="selectAmount" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="selectAmount()[pri:1, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="selectAmount" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -438,13 +438,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectAmount -->
-        <test-method status="SKIP" signature="ischeckaAmountExist()[pri:2, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="ischeckaAmountExist" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="ischeckaAmountExist()[pri:2, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="ischeckaAmountExist" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -485,13 +485,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ischeckaAmountExist -->
-        <test-method status="SKIP" signature="ischeckaRatingExist()[pri:3, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="ischeckaRatingExist" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="ischeckaRatingExist()[pri:3, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="ischeckaRatingExist" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -532,13 +532,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ischeckaRatingExist -->
-        <test-method status="SKIP" signature="selectGuestRating()[pri:4, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="selectGuestRating" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="selectGuestRating()[pri:4, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="selectGuestRating" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -579,13 +579,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectGuestRating -->
-        <test-method status="SKIP" signature="isCheckLunchincluded()[pri:5, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="isCheckLunchincluded" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="isCheckLunchincluded()[pri:5, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="isCheckLunchincluded" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -626,13 +626,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isCheckLunchincluded -->
-        <test-method status="SKIP" signature="selectLunch()[pri:6, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="selectLunch" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="selectLunch()[pri:6, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="selectLunch" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -673,13 +673,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectLunch -->
-        <test-method status="SKIP" signature="isCheckDinnerincluded()[pri:7, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="isCheckDinnerincluded" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="isCheckDinnerincluded()[pri:7, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="isCheckDinnerincluded" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -720,13 +720,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isCheckDinnerincluded -->
-        <test-method status="SKIP" signature="selectDinner()[pri:8, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="selectDinner" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="selectDinner()[pri:8, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="selectDinner" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -767,13 +767,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectDinner -->
-        <test-method status="SKIP" signature="selectDropdown()[pri:9, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="selectDropdown" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="selectDropdown()[pri:9, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="selectDropdown" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -814,13 +814,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectDropdown -->
-        <test-method status="SKIP" signature="selectHotelList()[pri:10, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="selectHotelList" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="selectHotelList()[pri:10, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="selectHotelList" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -861,13 +861,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectHotelList -->
-        <test-method status="SKIP" signature="cheapesthotels()[pri:11, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="cheapesthotels" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="cheapesthotels()[pri:11, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="cheapesthotels" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
@@ -908,13 +908,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cheapesthotels -->
-        <test-method status="SKIP" signature="clickCheapestHotel()[pri:12, instance:com.ba.Task.tests.BookingPageTest@778ca8ef]" name="clickCheapestHotel" duration-ms="0" started-at="2022-05-10T13:02:18 IST" finished-at="2022-05-10T13:02:18 IST">
+        <test-method status="SKIP" signature="clickCheapestHotel()[pri:12, instance:com.ba.Task.tests.BookingPageTest@1358b28e]" name="clickCheapestHotel" duration-ms="0" started-at="2022-05-10T13:13:12 IST" finished-at="2022-05-10T13:13:12 IST">
           <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe]]>
+              <![CDATA[The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\angap\Downloads\C:\Users\angap\Downloads\New folder (3)\chromedriver.exe
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\selenium_Task\src\test\resources\ChromeDriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
 at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
 at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
