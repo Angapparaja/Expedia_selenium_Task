@@ -1,4 +1,4 @@
-package com.ba.Task.factory;
+ package com.ba.Task.factory;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -45,7 +45,7 @@ public class DriverFactory {
 			
 			if(browserName.equalsIgnoreCase("chrome")) {
 				//WebDriverManager.chromedriver().setup();
-				System.setProperty("webdriver.chrome.driver", "./src/test/resources/Driver/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "/src/test/resources/Driver/chromedriver.exe");
 				  
 				if(Boolean.parseBoolean(prop.getProperty("remote"))){
 					init_remoteDriver("chrome");
