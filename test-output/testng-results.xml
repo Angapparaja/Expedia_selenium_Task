@@ -2,27 +2,59 @@
 <testng-results skipped="18" failed="0" ignored="0" total="18" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Expedia project" duration-ms="859" started-at="2022-05-11T14:41:56 IST" finished-at="2022-05-11T14:41:57 IST">
+  <suite name="Expedia project" duration-ms="3571" started-at="2022-05-11T15:53:14 IST" finished-at="2022-05-11T15:53:17 IST">
     <groups>
     </groups>
-    <test name="ExpediaTravelPage" duration-ms="570" started-at="2022-05-11T14:41:56 IST" finished-at="2022-05-11T14:41:57 IST">
+    <test name="ExpediaTravelPage" duration-ms="3228" started-at="2022-05-11T15:53:14 IST" finished-at="2022-05-11T15:53:17 IST">
       <class name="com.ba.Task.tests.TravelPageTest">
-        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.TravelPageTest@20921b9b]" name="setup" is-config="true" duration-ms="131" started-at="2022-05-11T14:41:56 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.TravelPageTest@535b8c24]" name="setup" is-config="true" duration-ms="2904" started-at="2022-05-11T15:53:14 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -48,28 +80,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="TravelpageTitleTests()[pri:1, instance:com.ba.Task.tests.TravelPageTest@20921b9b]" name="TravelpageTitleTests" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="TravelpageTitleTests()[pri:1, instance:com.ba.Task.tests.TravelPageTest@535b8c24]" name="TravelpageTitleTests" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -95,28 +171,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TravelpageTitleTests -->
-        <test-method status="SKIP" signature="TravlePageTest()[pri:1, instance:com.ba.Task.tests.TravelPageTest@20921b9b]" name="TravlePageTest" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="TravlePageTest()[pri:1, instance:com.ba.Task.tests.TravelPageTest@535b8c24]" name="TravlePageTest" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -142,28 +262,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TravlePageTest -->
-        <test-method status="SKIP" signature="SelectFirstDate()[pri:2, instance:com.ba.Task.tests.TravelPageTest@20921b9b]" name="SelectFirstDate" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="SelectFirstDate()[pri:2, instance:com.ba.Task.tests.TravelPageTest@535b8c24]" name="SelectFirstDate" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -189,28 +353,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectFirstDate -->
-        <test-method status="SKIP" signature="selectTraveller()[pri:3, instance:com.ba.Task.tests.TravelPageTest@20921b9b]" name="selectTraveller" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="selectTraveller()[pri:3, instance:com.ba.Task.tests.TravelPageTest@535b8c24]" name="selectTraveller" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -236,28 +444,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectTraveller -->
-        <test-method status="SKIP" signature="searchbtn()[pri:4, instance:com.ba.Task.tests.TravelPageTest@20921b9b]" name="searchbtn" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="searchbtn()[pri:4, instance:com.ba.Task.tests.TravelPageTest@535b8c24]" name="searchbtn" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -283,28 +535,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchbtn -->
-        <test-method status="SKIP" signature="searchClick()[pri:5, instance:com.ba.Task.tests.TravelPageTest@20921b9b]" name="searchClick" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="searchClick()[pri:5, instance:com.ba.Task.tests.TravelPageTest@535b8c24]" name="searchClick" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -330,32 +626,76 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchClick -->
       </class> <!-- com.ba.Task.tests.TravelPageTest -->
     </test> <!-- ExpediaTravelPage -->
-    <test name="ExpediaBookingPage" duration-ms="219" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
+    <test name="ExpediaBookingPage" duration-ms="275" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
       <class name="com.ba.Task.tests.BookingPageTest">
-        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="setup" is-config="true" duration-ms="2" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="setup" is-config="true" duration-ms="111" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -381,32 +721,76 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="bookingPageSetup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="bookingPageSetup" is-config="true" duration-ms="-1652260317544" started-at="2022-05-11T14:41:57 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="bookingPageSetup()[pri:0, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="bookingPageSetup" is-config="true" duration-ms="-1652264597645" started-at="2022-05-11T15:53:17 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookingPageSetup -->
-        <test-method status="SKIP" signature="selectAmount()[pri:1, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="selectAmount" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="selectAmount()[pri:1, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="selectAmount" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -432,28 +816,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectAmount -->
-        <test-method status="SKIP" signature="ischeckaAmountExist()[pri:2, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="ischeckaAmountExist" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="ischeckaAmountExist()[pri:2, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="ischeckaAmountExist" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -479,28 +907,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ischeckaAmountExist -->
-        <test-method status="SKIP" signature="ischeckaRatingExist()[pri:3, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="ischeckaRatingExist" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="ischeckaRatingExist()[pri:3, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="ischeckaRatingExist" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -526,28 +998,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ischeckaRatingExist -->
-        <test-method status="SKIP" signature="selectGuestRating()[pri:4, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="selectGuestRating" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="selectGuestRating()[pri:4, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="selectGuestRating" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -573,28 +1089,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectGuestRating -->
-        <test-method status="SKIP" signature="isCheckLunchincluded()[pri:5, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="isCheckLunchincluded" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="isCheckLunchincluded()[pri:5, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="isCheckLunchincluded" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -620,28 +1180,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isCheckLunchincluded -->
-        <test-method status="SKIP" signature="selectLunch()[pri:6, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="selectLunch" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="selectLunch()[pri:6, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="selectLunch" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -667,28 +1271,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectLunch -->
-        <test-method status="SKIP" signature="isCheckDinnerincluded()[pri:7, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="isCheckDinnerincluded" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="isCheckDinnerincluded()[pri:7, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="isCheckDinnerincluded" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -714,28 +1362,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isCheckDinnerincluded -->
-        <test-method status="SKIP" signature="selectDinner()[pri:8, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="selectDinner" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="selectDinner()[pri:8, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="selectDinner" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -761,28 +1453,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectDinner -->
-        <test-method status="SKIP" signature="selectDropdown()[pri:9, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="selectDropdown" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="selectDropdown()[pri:9, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="selectDropdown" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -808,28 +1544,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectDropdown -->
-        <test-method status="SKIP" signature="selectHotelList()[pri:10, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="selectHotelList" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="selectHotelList()[pri:10, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="selectHotelList" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -855,28 +1635,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectHotelList -->
-        <test-method status="SKIP" signature="cheapesthotels()[pri:11, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="cheapesthotels" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="cheapesthotels()[pri:11, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="cheapesthotels" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -902,28 +1726,72 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cheapesthotels -->
-        <test-method status="SKIP" signature="clickCheapestHotel()[pri:12, instance:com.ba.Task.tests.BookingPageTest@60e949e1]" name="clickCheapestHotel" duration-ms="0" started-at="2022-05-11T14:41:57 IST" finished-at="2022-05-11T14:41:57 IST">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="SKIP" signature="clickCheapestHotel()[pri:12, instance:com.ba.Task.tests.BookingPageTest@1500e009]" name="clickCheapestHotel" duration-ms="0" started-at="2022-05-11T15:53:17 IST" finished-at="2022-05-11T15:53:17 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"]]>
+              <![CDATA[Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\("user.dir")+"\chromedriver.exe\"
-at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:148)
-at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 403 No valid crumb was included in the request</title>
+</head>
+<body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+<table>
+<tr><th>URI:</th><td>/session</td></tr>
+<tr><th>STATUS:</th><td>403</td></tr>
+<tr><th>MESSAGE:</th><td>No valid crumb was included in the request</td></tr>
+<tr><th>SERVLET:</th><td>Stapler</td></tr>
+</table>
+<hr><a href="https://eclipse.org/jetty">Powered by Jetty:// 9.4.43.v20210629</a><hr/>
+
+</body>
+</html>
+
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -949,9 +1817,21 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: <. Last 1 characters read: <
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K171VAOP', ip: '192.168.100.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+at org.openqa.selenium.json.Json.toType(Json.java:69)
+at org.openqa.selenium.json.Json.toType(Json.java:55)
+at org.openqa.selenium.json.Json.toType(Json.java:50)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickCheapestHotel -->

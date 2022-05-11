@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/6</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 11 14:41:56 IST 2022</td>
+<td>Started on:</td><td>Wed May 11 15:53:14 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (570 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3228 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,32 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.ba.Task.tests.TravelPageTest.setup()'><b>setup</b><br>Test class: com.ba.Task.tests.TravelPageTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+<td><div><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -111,17 +127,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1884422865", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1884422865'><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace195163481", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace195163481'><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -147,9 +191,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
 </pre></div></td>
-<td>0</td>
-<td>com.ba.Task.tests.TravelPageTest@20921b9b</td></tr>
+<td>2</td>
+<td>com.ba.Task.tests.TravelPageTest@535b8c24</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -160,16 +216,32 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.ba.Task.tests.TravelPageTest.TravlePageTest()'><b>TravlePageTest</b><br>Test class: com.ba.Task.tests.TravelPageTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+<td><div><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -195,17 +267,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1171672359", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1171672359'><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace462073515", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace462073515'><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -231,97 +331,49 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
 </pre></div></td>
 <td>0</td>
-<td>com.ba.Task.tests.TravelPageTest@20921b9b</td></tr>
-<tr>
-<td title='com.ba.Task.tests.TravelPageTest.selectTraveller()'><b>selectTraveller</b><br>Test class: com.ba.Task.tests.TravelPageTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
-	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-	at org.testng.TestRunner.run(TestRunner.java:589)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace208513211", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace208513211'><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
-	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-	at org.testng.TestRunner.run(TestRunner.java:589)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.ba.Task.tests.TravelPageTest@20921b9b</td></tr>
+<td>com.ba.Task.tests.TravelPageTest@535b8c24</td></tr>
 <tr>
 <td title='com.ba.Task.tests.TravelPageTest.searchbtn()'><b>searchbtn</b><br>Test class: com.ba.Task.tests.TravelPageTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+<td><div><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -347,17 +399,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace532297836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace532297836'><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1747862060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1747862060'><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -383,21 +463,49 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
 </pre></div></td>
 <td>0</td>
-<td>com.ba.Task.tests.TravelPageTest@20921b9b</td></tr>
+<td>com.ba.Task.tests.TravelPageTest@535b8c24</td></tr>
 <tr>
 <td title='com.ba.Task.tests.TravelPageTest.searchClick()'><b>searchClick</b><br>Test class: com.ba.Task.tests.TravelPageTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+<td><div><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -423,17 +531,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1992525817", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1992525817'><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1925835770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1925835770'><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -459,21 +595,49 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
 </pre></div></td>
 <td>0</td>
-<td>com.ba.Task.tests.TravelPageTest@20921b9b</td></tr>
+<td>com.ba.Task.tests.TravelPageTest@535b8c24</td></tr>
 <tr>
 <td title='com.ba.Task.tests.TravelPageTest.TravelpageTitleTests()'><b>TravelpageTitleTests</b><br>Test class: com.ba.Task.tests.TravelPageTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+<td><div><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -499,17 +663,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace273041802", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace273041802'><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace918584437", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace918584437'><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -535,21 +727,49 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
 </pre></div></td>
 <td>0</td>
-<td>com.ba.Task.tests.TravelPageTest@20921b9b</td></tr>
+<td>com.ba.Task.tests.TravelPageTest@535b8c24</td></tr>
 <tr>
 <td title='com.ba.Task.tests.TravelPageTest.SelectFirstDate()'><b>SelectFirstDate</b><br>Test class: com.ba.Task.tests.TravelPageTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+<td><div><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -575,17 +795,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace909516251", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace909516251'><pre>java.lang.IllegalStateException: The driver executable does not exist: E:\Java demo\selenium_Task\(&quot;user.dir&quot;)+&quot;\chromedriver.exe\&quot;
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:148)
-	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:55)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace878169229", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace878169229'><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
 	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -611,9 +859,153 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
 </pre></div></td>
 <td>0</td>
-<td>com.ba.Task.tests.TravelPageTest@20921b9b</td></tr>
+<td>com.ba.Task.tests.TravelPageTest@535b8c24</td></tr>
+<tr>
+<td title='com.ba.Task.tests.TravelPageTest.selectTraveller()'><b>selectTraveller</b><br>Test class: com.ba.Task.tests.TravelPageTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
+	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace227005513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace227005513'><pre>org.openqa.selenium.WebDriverException: Unable to parse remote response: &lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;title&gt;Error 403 No valid crumb was included in the request&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 403 No valid crumb was included in the request&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;/session&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;403&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;No valid crumb was included in the request&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;SERVLET:&lt;/th&gt;&lt;td&gt;Stapler&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;&lt;a href=&quot;https://eclipse.org/jetty&quot;&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.ba.Task.factory.DriverFactory.init_remoteDriver(DriverFactory.java:94)
+	at com.ba.Task.factory.DriverFactory.initDriver(DriverFactory.java:51)
+	at com.ba.Task.tests.BaseTest.setup(BaseTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: &lt;. Last 1 characters read: &lt;
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-K171VAOP&apos;, ip: &apos;192.168.100.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:122)
+	at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:140)
+	at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:126)
+	at org.openqa.selenium.json.Json.toType(Json.java:69)
+	at org.openqa.selenium.json.Json.toType(Json.java:55)
+	at org.openqa.selenium.json.Json.toType(Json.java:50)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:112)
+	... 33 more
+</pre></div></td>
+<td>0</td>
+<td>com.ba.Task.tests.TravelPageTest@535b8c24</td></tr>
 </table><p>
 </body>
 </html>
