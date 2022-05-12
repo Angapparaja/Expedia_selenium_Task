@@ -8,9 +8,20 @@
     <classes>
       <class name="com.ba.Task.tests.BookingPageTest">
         <methods>
-          <include name="bookingPageSetup"/>
-          <include name="setup"/>
+          <include name="selectHotelList"/>
+          <include name="isCheckLunchincluded"/>
+          <include name="selectDinner"/>
+          <include name="selectDropdown"/>
+          <include name="isCheckDinnerincluded"/>
+          <include name="selectLunch"/>
           <include name="cheapesthotels"/>
+          <include name="ischeckaAmountExist"/>
+          <include name="bookingPageSetup"/>
+          <include name="selectGuestRating"/>
+          <include name="clickCheapestHotel"/>
+          <include name="selectAmount"/>
+          <include name="setup"/>
+          <include name="ischeckaRatingExist"/>
         </methods>
       </class> <!-- com.ba.Task.tests.BookingPageTest -->
     </classes>
