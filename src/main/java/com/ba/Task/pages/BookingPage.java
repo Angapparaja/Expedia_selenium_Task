@@ -32,9 +32,9 @@ public class BookingPage {
 	private By Dinnerincluded =By.id("mealPlan-2-FULL_BOARD");
 	private By dropdowndetails =By.xpath("//select[@id='sort']");
 	private By ListofHotels =By.xpath("//ol//li/h3[text()]");
-	private By cheapestHotels =By.xpath("(//h3[@class='uitk-heading-5 truncate-lines-2 all-b-padding-half pwa-theme--grey-900 uitk-type-heading-500'])[1]");
+	private By cheapestHotels =By.xpath("(//h2[@class='uitk-heading-5'])[1]");
 
-	private By clickCheapestHotel=By.xpath("//div[@class='uitk-card uitk-card-roundcorner-all uitk-card-has-primary-theme']/a[1]");
+	private By clickCheapestHotel=By.xpath("//div[@class='uitk-card uitk-card-roundcorner-all uitk-card-has-link uitk-card-has-primary-theme']/a[1]");
 	
 	public BookingPage(WebDriver driver) {
 		this.driver=driver;

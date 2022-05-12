@@ -4,39 +4,13 @@
   <listeners>
     <listener class-name="com.ba.Task.listeners.TestAllureListener"/>
   </listeners>
-  <test thread-count="2" verbose="4" name="ExpediaTravelPage(failed)">
-    <classes>
-      <class name="com.ba.Task.tests.TravelPageTest">
-        <methods>
-          <include name="searchClick"/>
-          <include name="selectTraveller"/>
-          <include name="searchbtn"/>
-          <include name="TravelpageTitleTests"/>
-          <include name="setup"/>
-          <include name="TravlePageTest"/>
-          <include name="SelectFirstDate"/>
-        </methods>
-      </class> <!-- com.ba.Task.tests.TravelPageTest -->
-    </classes>
-  </test> <!-- ExpediaTravelPage(failed) -->
   <test thread-count="2" verbose="4" name="ExpediaBookingPage(failed)">
     <classes>
       <class name="com.ba.Task.tests.BookingPageTest">
         <methods>
-          <include name="selectHotelList"/>
-          <include name="isCheckLunchincluded"/>
-          <include name="selectDinner"/>
-          <include name="selectDropdown"/>
-          <include name="isCheckDinnerincluded"/>
-          <include name="selectLunch"/>
-          <include name="cheapesthotels"/>
-          <include name="ischeckaAmountExist"/>
           <include name="bookingPageSetup"/>
-          <include name="selectGuestRating"/>
-          <include name="clickCheapestHotel"/>
-          <include name="selectAmount"/>
           <include name="setup"/>
-          <include name="ischeckaRatingExist"/>
+          <include name="cheapesthotels"/>
         </methods>
       </class> <!-- com.ba.Task.tests.BookingPageTest -->
     </classes>
