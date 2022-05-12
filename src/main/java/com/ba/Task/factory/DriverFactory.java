@@ -45,7 +45,7 @@ public class DriverFactory {
 			
 			if(browserName.equalsIgnoreCase("chrome")) {
 				//WebDriverManager.chromedriver().setup();
-				System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/workspace/selenium_expedia_update_project/./src/test/resources/Driver/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
 				  
 				if(Boolean.parseBoolean(prop.getProperty("remote"))){
 					init_remoteDriver("chrome");
