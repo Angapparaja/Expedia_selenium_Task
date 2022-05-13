@@ -1,49 +1,45 @@
 pipeline{
     agent any
+    tools{
+       maven 'M3'
+    }
     stages{
         
         stage("Build"){
             steps{
-                echo("Building")
+                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                sh "mvn -Dmaven.test.failure.ignore =true clean package"
             }
+            post 
+            {
+            success{
+            junit '**/target/surefire-reports/TEST-*.xml'
+            archiveArtifacts 'target/*.jar'
+        }
+        }
         }
         
-            stage("deploy to dev"){
+            stage('Test'){
             steps{
-                echo("deploy to dev")
+               catchError(buildResult:'SUCCESS',stageResult: 'FAILURE'){
+               git 'https://github.com/Angapparaja/Expedia_selenium_Task.git'
+            sh "mvn clean install"
             }
+        }
+        }
+        stage('publish Allure Reports'){
+            steps{
+               script{
+               allure([
+               includeProperties:false,
+               jdk:'',
+               properties:[],
+               reportBuildPolicy: 'ALWAYS',
+               results:[[path:'/allure-results']]
+               ])
+            }
+        }
         }
         
-        stage("deploy to qa"){
-            steps{
-                echo("deploy to dev")
-            }
-        }
-        stage("regression test on qa"){
-            steps{
-                echo("regression test on qa")
-            }
-        }
-          stage("deploy to stage"){
-            steps{
-                echo("deploy to stage")
-            }
-        }
-          stage("sanity test"){
-            steps{
-                echo("sanity test")
-            }
-        }
-        
-           stage("regression test"){
-            steps{
-                echo("regression test")
-            }
-        }
-          stage("deploy to prod"){
-            steps{
-                echo("deploy to prod")
-            }
-        }
-    }
+       
 }
