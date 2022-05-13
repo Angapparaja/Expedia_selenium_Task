@@ -1,18 +1,22 @@
-pipeline{
+pipeline
+{
     agent any
     tools{
        maven 'M3'
     }
-    stages{
+    stages
+    {
         
-        stage("Build"){
-            steps{
+        stage('Build'){
+            steps
+            {
                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
                 sh "mvn -Dmaven.test.failure.ignore =true clean package"
             }
             post 
             {
-            success{
+            success
+            {
             junit '**/target/surefire-reports/TEST-*.xml'
             archiveArtifacts 'target/*.jar'
         }
@@ -23,7 +27,7 @@ pipeline{
             steps{
                catchError(buildResult:'SUCCESS',stageResult: 'FAILURE'){
                git 'https://github.com/Angapparaja/Expedia_selenium_Task.git'
-            sh "mvn clean install"
+               sh "mvn clean install"
             }
         }
         }
