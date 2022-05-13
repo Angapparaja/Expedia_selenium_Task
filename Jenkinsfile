@@ -1,5 +1,4 @@
-pipeline
-{
+pipeline {
     agent any
     tools{
        maven 'M3'
@@ -21,7 +20,7 @@ pipeline
             archiveArtifacts 'target/*.jar'
         }
         }
-        }
+        
         
             stage('Test'){
             steps{
@@ -43,5 +42,6 @@ pipeline
                ])
             }
         }
+     }
      }
 }
