@@ -45,7 +45,7 @@ public class DriverFactory {
 			
 			if(browserName.equalsIgnoreCase("chrome")) {
 				//WebDriverManager.chromedriver().setup();
-				System.setProperty("webdriver.chrome.driver", "/Users/angap/Downloads/linux/chromedriver");
+				System.setProperty("webdriver.chrome.driver", "/selenium_Task/chromedriver");
 				  
 				if(Boolean.parseBoolean(prop.getProperty("remote"))){
 					init_remoteDriver("chrome");
