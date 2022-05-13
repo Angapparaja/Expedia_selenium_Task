@@ -25,7 +25,7 @@ pipeline {
             stage('Test'){
             steps{
                catchError(buildResult:'SUCCESS',stageResult: 'FAILURE'){
-               git 'https://github.com/Angapparaja/Expedia_selenium_Task'
+               git 'https://github.com/Angapparaja/Expedia_selenium_Task.git'
                sh "mvn clean install"
             }
         }
