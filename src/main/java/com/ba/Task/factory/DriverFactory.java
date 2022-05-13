@@ -45,7 +45,14 @@ public class DriverFactory {
 			
 			if(browserName.equalsIgnoreCase("chrome")) {
 				//WebDriverManager.chromedriver().setup();
-				System.setProperty("webdriver.chrome.driver", "/selenium_Task/chromedriver");
+				String osname = prop.getProperty("os.name");
+
+				if(osname.startsWith("Linux")){
+				    System.setProperty("webdriver.chrome.driver", "/selenium_Task/chromedriver") ;
+				  }else if(osname.startsWith("Windows")){
+				    System.setProperty("webdriver.chrome.driver", "/selenium_Task/chromedriver.exe") ;
+				  }
+				
 				  
 				if(Boolean.parseBoolean(prop.getProperty("remote"))){
 					init_remoteDriver("chrome");
