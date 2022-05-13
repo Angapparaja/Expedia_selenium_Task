@@ -4,6 +4,21 @@
   <listeners>
     <listener class-name="com.ba.Task.listeners.TestAllureListener"/>
   </listeners>
+  <test thread-count="2" verbose="4" name="ExpediaTravelPage(failed)">
+    <classes>
+      <class name="com.ba.Task.tests.TravelPageTest">
+        <methods>
+          <include name="searchClick"/>
+          <include name="selectTraveller"/>
+          <include name="searchbtn"/>
+          <include name="TravelpageTitleTests"/>
+          <include name="setup"/>
+          <include name="TravlePageTest"/>
+          <include name="SelectFirstDate"/>
+        </methods>
+      </class> <!-- com.ba.Task.tests.TravelPageTest -->
+    </classes>
+  </test> <!-- ExpediaTravelPage(failed) -->
   <test thread-count="2" verbose="4" name="ExpediaBookingPage(failed)">
     <classes>
       <class name="com.ba.Task.tests.BookingPageTest">
