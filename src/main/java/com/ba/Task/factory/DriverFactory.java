@@ -172,7 +172,7 @@ public class DriverFactory {
 		}
 		
 		/**
-		 * TAKE A SCREENSHOT
+		 * TAKE A SCREENSHOTS
 		 */
 		public String getScreenshot() {
 			File srcFile =((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
