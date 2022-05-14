@@ -52,7 +52,7 @@ pipeline
            steps{
                   publishHTML([ allowMissing: false,
                   alwaysLinkToLastBuild :false,
-                  KeepAll:false,
+                  keepAll:false,
                   reportDir:'build',
                   reportFiles:'TestExecutionReport.html',
                   reportName:'HTML Extent Report',
