@@ -48,9 +48,9 @@ public class DriverFactory {
 				String osname = prop.getProperty("os.name");
 
 				if(osname.startsWith("Linux")){
-				    System.setProperty("webdriver.chrome.driver", ".\\src\\chromedriver") ;
+				    System.setProperty("webdriver.chrome.driver", "\\chromedriver") ;
 				  }else if(osname.startsWith("Windows")){
-				    System.setProperty("webdriver.chrome.driver", ".\\src\\chromedriver.exe") ;
+				    System.setProperty("webdriver.chrome.driver", "\\chromedriver.exe") ;
 				  }
 				
 				  
