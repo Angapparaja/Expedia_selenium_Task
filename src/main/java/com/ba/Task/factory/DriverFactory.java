@@ -158,7 +158,7 @@ public class DriverFactory {
 			try {
 				
 				prop =new Properties();
-				prop.load(ip); 
+				prop.load(ip);
 			} 
 			
 			
