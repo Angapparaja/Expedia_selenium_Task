@@ -19,12 +19,12 @@
 	</test>
 
 
-	<test name="ExpediaBookingPage">
+<!--	<test name="ExpediaBookingPage">
 	
 		<classes>
 			<class name="com.ba.Task.tests.BookingPageTest" />
 		</classes>
-	</test>
+	</test> -->
 
 
 
