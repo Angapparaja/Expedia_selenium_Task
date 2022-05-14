@@ -48,9 +48,9 @@ public class DriverFactory {
 				String osname = prop.getProperty("os.name");
 
 				if(osname.startsWith("Linux")){
-				    System.setProperty("webdriver.chrome.driver", "chromedriver") ;
+				    System.setProperty("webdriver.chrome.driver", "E:\\Java demo\\selenium_Task\\chromedriver") ;
 				  }else if(osname.startsWith("Windows")){
-				    System.setProperty("webdriver.chrome.driver", "chromedriver.exe") ;
+				    System.setProperty("webdriver.chrome.driver", "E:\\Java demo\\selenium_Task\\chromedriver.exe") ;
 				  }
 				
 				  
@@ -121,17 +121,48 @@ public class DriverFactory {
 		
 		public Properties intiProperties() {  
 			Properties prop =null; 
+			FileInputStream ip =null;
 			
+			String env =System.getProperty("env");//mvn clean install -Denv="qa"
 			try {
-				FileInputStream ip =new FileInputStream(".//src//test//resources//config//config.properties");
+			if(env==null) {
+				System.out.println("Running on Environment:PROD env...");
+			
+					ip =new FileInputStream(".//src//test//resources//config//config.properties");
+				
+			}
+			else {
+				System.out.println("Running on Environment:" +env);
+				switch(env) {
+				case "qa":
+					ip =new FileInputStream(".//src//test//resources//config//qa.config.properties");
+					break;
+				case "dev":
+					ip =new FileInputStream(".//src//test//resources//config//dev.config.properties");
+					break;
+				case "stage":
+					ip =new FileInputStream(".//src//test//resources//config//stage.config.properties");
+					break;
+					default:
+						System.out.println("NO ENV found...");
+						throw new Exception("NOENVFOUNDEXCEPTION");
+					
+				}
+			}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+			
+				e.printStackTrace();
+			}
+			try {
+				
 				prop =new Properties();
 				prop.load(ip); 
 			} 
 			
 			
-			catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} 
+		
 			
 	 catch (IOException e) {
 				e.printStackTrace();
