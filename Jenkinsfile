@@ -14,7 +14,7 @@ pipeline
             steps
             {
                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-                sh "mvn -Dmaven.test.failure.ignore =true clean package"
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
             post 
             {
@@ -30,7 +30,7 @@ pipeline
             steps{
                catchError(buildResult:'SUCCESS',stageResult: 'FAILURE'){
                  git 'https://github.com/Angapparaja/Expedia_selenium_Task.git'
-                 sh "clean install"
+                 sh "mvn clean install"
             }
         }
      }
